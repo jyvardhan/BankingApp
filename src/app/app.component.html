@@ -1,0 +1,33 @@
+<!-- App Header -->
+<div style="text-align:center">
+  <h1>
+    Welcome to Banking FrontEnd!
+  </h1>
+</div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+
+    <li class="nav-item">
+      <a routerLink="accounts" class="nav-link">Account List</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="create-account" class="nav-link">Add Account</a>
+    </li>
+
+  </ul>
+</nav>
+
+<!-- Routed Views Render Here -->
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-light mt-5">
+  <div class="container text-center">
+    <span class="text-muted">Banking App © 2025</span>
+  </div>
+</footer>

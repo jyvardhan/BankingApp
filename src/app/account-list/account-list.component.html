@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2 class="text-center text-primary">Account List</h2>
+
+  <table class="table table-bordered table-striped mt-4">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Account Holder Name</th>
+        <th>Balance (₹)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>{{ account.id }}</td>
+        <td>{{ account.accountHolderName }}</td>
+        <td>{{ account.balance | currency:'INR' }}</td>
+        <td>
+          <button (click)="updateAccount(account.id)" class="btn btn-sm btn-info mr-2">Update</button>
+          <button (click)="deleteAccount(account.id)" class="btn btn-sm btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
